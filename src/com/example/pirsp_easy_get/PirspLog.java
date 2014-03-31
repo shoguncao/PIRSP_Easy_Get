@@ -53,7 +53,7 @@ public class PirspLog {
 	public boolean initLog() {
 		if (OPEN_LOG) {
 			try {
-				String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/PirspPlatform";
+				String dirPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/PirspEasyGet";
 				File dir = new File(dirPath);
 				if (!dir.exists()) {
 					dir.mkdir();
