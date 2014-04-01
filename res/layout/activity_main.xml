@@ -1,4 +1,4 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,10 +12,18 @@
         android:id="@+id/btnOpenAlbum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginLeft="22dp"
         android:layout_marginTop="36dp"
         android:text="@string/open_album" />
 
-</RelativeLayout>
+    <ImageView
+        android:id="@+id/imgViewPublis"
+		android:scaleType="fitCenter"
+ 		android:layout_width="30dp"
+       	android:layout_height="30dp"
+       	android:layout_gravity="bottom|center"
+       	android:contentDescription="@string/action_publish"
+       	android:src="@drawable/ic_publish" />
+
+</FrameLayout>
+
