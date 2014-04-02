@@ -6,5 +6,6 @@
 	<string name="open_album">打开相册</string>
 	<string name="action_menu">退出</string>
 	<string name="action_publish">发表</string>
+	<string name="show_selected_image">展示选择照片</string>
 
 </resources>

@@ -4,10 +4,12 @@
     android:layout_width="wrap_content"  
     android:layout_height="wrap_content">  
       
-    <ImageView android:id="@+id/bitmapView"  
+    <ImageView android:id="@+id/bitmapView"
         android:layout_marginTop="30sp"  
         android:layout_width="200dp"  
         android:layout_height="200dp"  
-        android:background="#ff0000" />  
+        android:background="#ff0000" 
+        android:contentDescription="@string/show_selected_image">
+    </ImageView>
       
 </LinearLayout>
