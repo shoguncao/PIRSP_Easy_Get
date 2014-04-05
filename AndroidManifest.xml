@@ -6,7 +6,9 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="10" />
+        android:targetSdkVersion="19" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -26,5 +28,4 @@
             android:name="com.example.pirsp_easy_get.OpenAlbumActivity">
         </activity>
     </application>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>

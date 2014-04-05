@@ -8,16 +8,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:id="@+id/btnOpenAlbum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginTop="36dp"
-        android:text="@string/open_album" />
-
     <ImageView
-        android:id="@+id/imgViewPublis"
+        android:id="@+id/imgViewPublish"
 		android:scaleType="fitCenter"
  		android:layout_width="30dp"
        	android:layout_height="30dp"

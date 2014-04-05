@@ -3,13 +3,18 @@ package com.example.pirsp_easy_get;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.PopupWindow;
 
 public class MainActivity extends Activity {
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		PirspLog.GetInstance().log("******************************LOG BEGIN******************************");
@@ -17,12 +22,24 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		Button btnOpenAlbum = (Button)findViewById(R.id.btnOpenAlbum);
-		btnOpenAlbum.setOnClickListener(new Button.OnClickListener() {
+		ImageView imgViewPublish = (ImageView)findViewById(R.id.imgViewPublish);
+		imgViewPublish.setOnClickListener(new Button.OnClickListener() {
 			public void onClick(View v) {
-				Intent intent = new Intent();
-				intent.setClass(MainActivity.this, OpenAlbumActivity.class);
-				startActivity(intent);
+				View popupView = getLayoutInflater().inflate(R.layout.activity_popup_publish, null);
+				PopupWindow popupWindow = new PopupWindow(popupView, LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT, true);
+				popupWindow.setTouchable(true);
+				popupWindow.setOutsideTouchable(true);
+				popupWindow.setBackgroundDrawable(new BitmapDrawable(getResources(), (Bitmap) null));
+				popupWindow.showAtLocation(v, Gravity.BOTTOM, 0, v.getHeight()+40);
+				
+				Button openAlbum = (Button)popupView.findViewById(R.id.action_openAlbum);
+				openAlbum.setOnClickListener(new Button.OnClickListener() {
+					public void onClick(View v) {
+						Intent intent = new Intent();
+						intent.setClass(MainActivity.this, OpenAlbumActivity.class);
+						startActivity(intent);
+					}
+				});
 			}
 		});
 	}
